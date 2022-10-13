@@ -1,3 +1,12 @@
+"""
+By using 'pipelines_penman' module the program: read cfg-files from 
+directories, which are deterimed by filepaths; extract cfg-file
+content and transform it; print in console commands, which are fully
+ready to move in sql-file as a program body with section separating
+comments.
+
+"""
+
 import pipelines_penman as pen
 
 # cfg-file directory paths
@@ -16,6 +25,6 @@ for i in range(len(input_tab_data)):
 env_id, src_sys_count = pen.writedown_general_data(input_gen_data)
 id = pen.writedown_src_tables(input_tab_data, env_id)
 id = pen.writedown_serv_tables(input_tab_data, env_id, id)
-# list end check
+# input list end check
 N = len(input_tab_data)
 print('Is work done?    -', id >= N)
