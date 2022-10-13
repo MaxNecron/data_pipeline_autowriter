@@ -1,18 +1,23 @@
 """
 
-Программа для создания текстового файла с кодом, который должен
-создавать пайплайл по переносу данных из таблиц источника в dds-слой
-hdfs. Создаются: таблицы источника, сервисные таблицы для переключевания
-(генерации сурогатных ключей SK), DAG'и, шаги DAG'ов и связи между ними.
-Создание осуществляется с помощью команд (функций) metaload v.1.3.
-Записи таких функции в выходной текстовый файл в виде команды с
-требуемыми аргументами (параметрами) вормируются с помощью инструментов
-метода "mtl_v1_3".
+The module for creation text file with code, which must create 
+pipeline for transition data from source systems to dds-schema of
+hdfs. Are creating: source tables, serving tables in dds_lgc, dds_lnk
+and dds schemas, DAGs, DAG steps and dependences between them.
+Creation are carried out with metaload v_1.3 functions. 
+Writing such functions to output text file in command form with
+required parameters are formed by module "mtl_v1_3.py" tools.
 
-Необходимо сформулировать, как забирать постановку из cfg-файлов, в
-каком виде забирать, и в каком виде "нести" эту информацию до функций,
-как подставлять необходимые параметры в различные функции, требуется ли
-отдельная библиотека для чтения "cfg" и записи команд в выходной файл.
+DONE:
+Way to take required parameters for creating tables from
+configuration files developed. Regrouping and transition readed
+parameters to writing functions are implemented. Writing functions
+do not write command text into any output file, they just print text
+into console.
+
+PLANNED:
+Writing code in a file. Reading and writing functions for DAG command
+block.
 
 """
 
